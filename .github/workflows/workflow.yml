@@ -26,4 +26,4 @@ jobs:
         sudo apt-get update && sudo apt-get install -y awscli
     - name: Sync to S3
       run: |
-        aws s3 sync . s3://aws-devops-cicddemo1 --delete --exclude ".git/*" --exclude ".github/*"
+        aws s3 sync . s3://aws-devops-cicddemo1 --region us-east-2 --delete --exclude ".git/*" --exclude ".github/*"
