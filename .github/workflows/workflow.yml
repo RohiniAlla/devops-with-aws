@@ -25,6 +25,8 @@ jobs:
     - name: Install AWS CLI
       run: |
         sudo apt-get update && sudo apt-get install -y awscli
+    - name: list prifiles
+      run: |
         sudo aws configure list-profiles
     - name: Sync to S3
       run: |
