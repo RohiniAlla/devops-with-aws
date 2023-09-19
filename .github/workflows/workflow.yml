@@ -19,7 +19,7 @@ jobs:
       with:
         aws-access-key-id: AKIA2SB2U2MGUC6DKP2C
         aws-secret-access-key: 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
-        aws-region: us-west-2
+        aws-region: us-east-2
 
     - name: Install AWS CLI
       run: |
