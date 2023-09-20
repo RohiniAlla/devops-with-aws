@@ -16,6 +16,6 @@ jobs:
         AWS_SECRET_ID: AKIA2SB2U2MGUC6DKP2C
         AWS_SECRET_KEY: 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
         aws-region: us-east-2
-        bucket: aws-devops-cicddemo1
+        bucket: aws-devops-cicddemo2
         source: /
-        target: s3://aws-devops-cicddemo1 
+        target: s3://aws-devops-cicddemo2 
