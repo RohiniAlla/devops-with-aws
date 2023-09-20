@@ -23,7 +23,7 @@ jobs:
         sudo apt-get update && sudo apt-get install -y awscli
    # - name: list profiles
     #  run: |
-     #   aws configure list-profiles        
+    #   aws configure list-profiles        
     - name: Sync to S3
       run: |
         aws s3 sync . s3://aws-devops-cicddemo1 --delete --exclude ".git/*" --exclude ".github/*"
