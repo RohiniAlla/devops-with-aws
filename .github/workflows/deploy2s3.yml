@@ -26,7 +26,7 @@ jobs:
           bucket: ${{ secrets.AWS_S3_BUCKET }}
           source: '.'
           target: 'codedeploy-demo/app.zip'
-      - name: deploy to S3
+      - name: deploy S3
         run: |
              aws deploy push --application-name CodeDeployDemo --s3-location s3://aws-devops-cicddemo/codedeploy-demo/app.zip --ignore-hidden-files --region us-east-2 --profile aws-devops
         #aws s3 sync . s3://aws-devops-cicddemo1 --profile aws-devops --region us-east-2 --delete --exclude ".git/*" --exclude ".github/*"
