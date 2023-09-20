@@ -26,7 +26,7 @@ jobs:
       run: |
         aws configure list-profiles
     - name: aws deploy s3
-      uses: RohiniAlla/devops-with-aws@v2
+      uses: actions/checkout@v2
       with:
         region: us-east-2
         bucket: aws-devops-cicddemo1
