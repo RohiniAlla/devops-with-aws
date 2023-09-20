@@ -19,8 +19,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_S3_REGION }}
       - name: Deploy static files to AWS S3
-        id: aws-deploy-s3
-        uses: RohiniAlla/aws-deploy-s3@main
+        id: devops-with-aws
+        uses: RohiniAlla/devops-with-aws@main
         with:
           region: ${{ secrets.AWS_S3_REGION }}
           bucket: ${{ secrets.AWS_S3_BUCKET }}
