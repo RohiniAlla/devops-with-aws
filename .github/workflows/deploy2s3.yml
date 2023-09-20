@@ -10,12 +10,14 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
     - name: aws deploy s3
-      uses: actions/aws-deploy-s3@v2
+      uses: actions/checkout@v2
       with:
         AWS_SECRET_ID: AKIA2SB2U2MGUC6DKP2C
         AWS_SECRET_KEY: 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
         aws-region: us-east-2
         bucket: aws-devops-cicddemo2
-        source: /
+        source: .
         target: s3://aws-devops-cicddemo2 
