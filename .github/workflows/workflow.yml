@@ -30,7 +30,7 @@ jobs:
       with:
         region: us-east-2
         bucket: aws-devops-cicddemo1
-        source: ./dist
+        source: .
         target: s3://aws-devops-cicddemo1           
     - name: Sync to S3
       run: |
