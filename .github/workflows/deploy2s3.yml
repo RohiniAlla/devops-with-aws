@@ -26,4 +26,4 @@ jobs:
           bucket: ${{ secrets.AWS_S3_BUCKET }}
           source: '.'
           target: 'sample2'
-          #aa
+          
