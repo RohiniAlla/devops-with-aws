@@ -15,19 +15,26 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Configure AWS credentials
-      uses: actions/checkout@v2
+      uses: RohiniAlla/devops-with-aws@v2
       with:
-        #aws-access-key-id: 
-        #aws-secret-access-key: 
+        AWS_SECRET_ID: AKIA2SB2U2MGUC6DKP2C
+        AWS_SECRET_KEY: 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
         aws-region: us-east-2
         #aws-output
 
     - name: Install AWS CLI
       run: |
         sudo apt-get update && sudo apt-get install -y awscli
-    - name: list prifiles
+    - name: list profiles
       run: |
         aws configure list-profiles
+    - name: aws deploy s3
+      uses: RohiniAlla/devops-with-aws@v2
+      with:
+        region: us-east-2
+        bucket: aws-devops-cicddemo1
+        source: ./dist
+        target: s3://aws-devops-cicddemo1           
     - name: Sync to S3
       run: |
         aws s3 sync . s3://aws-devops-cicddemo1 --profile aws-devops --region us-east-2 --delete --exclude ".git/*" --exclude ".github/*"
