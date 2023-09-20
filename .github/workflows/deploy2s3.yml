@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create a static folder & file
-        run: mkdir sample2 && echo hello > sample/sample.txt && echo nice > sample/sample2.txt
+        run: mkdir sample && echo hello > sample/sample.txt && echo nice > sample/sample2.txt
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -25,5 +25,5 @@ jobs:
           region: ${{ secrets.AWS_S3_REGION }}
           bucket: ${{ secrets.AWS_S3_BUCKET }}
           source: '.'
-          target: 'sample2'
+          target: 'sample'
           
