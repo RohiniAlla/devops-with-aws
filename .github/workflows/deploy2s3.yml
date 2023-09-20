@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: aws deploy s3
-      uses: actions/checkout@v2
+      uses: actions/aws-deploy-s3@v2
       with:
         AWS_SECRET_ID: AKIA2SB2U2MGUC6DKP2C
         AWS_SECRET_KEY: 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
