@@ -12,7 +12,8 @@ jobs:
     steps:
     
     - name: aws deploy s3
-      uses: oneyedev/aws-deploy-s3@v2
+      id: devops-with-aws
+      uses: RohiniAlla/devops-with-aws@main
       with:
         AWS_SECRET_ID: AKIA2SB2U2MGUC6DKP2C
         AWS_SECRET_KEY: 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
